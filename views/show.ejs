@@ -10,6 +10,14 @@
       <p>
         <%= campground.description %>
       </p>
+      <ul>
+        <% campground.comments.forEach((comment) => { %>
+        <li>
+          <strong><%= comment.author %></strong>
+          <p><%= comment.text %></p>
+        </li>
+        <% }) %>
+      </ul>
     </div>
   </div>
 </div>
