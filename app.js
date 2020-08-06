@@ -1,3 +1,4 @@
+const path = require("path");
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -15,6 +16,7 @@ mongoose.connect("mongodb://localhost/yelpcamp", {
   useUnifiedTopology: true,
 });
 
+app.use(express.static(path.join(__dirname, "/public")));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 

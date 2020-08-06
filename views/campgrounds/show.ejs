@@ -2,27 +2,60 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-6 offset-md-3">
-      <img src="<%= campground.image %>" class="img-thumbnail" />
-      <h1>
-        <%= campground.name %>
-      </h1>
-      <p>
-        <%= campground.description %>
-      </p>
-      <a
-        href="/campgrounds/<%= campground._id %>/comments/new"
-        class="btn btn-success btn-block mb-4"
-        >Add Comment</a
-      >
-      <ul>
-        <% campground.comments.forEach((comment) => { %>
-        <li>
-          <strong><%= comment.author %></strong>
-          <p><%= comment.text %></p>
-        </li>
-        <% }) %>
+    <div class="col-md-3">
+      <p class="lead">YelpCamp</p>
+      <ul class="list-group">
+        <li class="list-group-item active">Item #1</li>
+        <li class="list-group-item">Item #2</li>
+        <li class="list-group-item">Item #3</li>
       </ul>
+    </div>
+    <div class="col-md-9">
+      <div class="card">
+        <img class="card-img-top" src="<%= campground.image %>" alt="" />
+        <div class="card-body">
+          <h3 class="card-title">
+            <a href="#">
+              <%= campground.name %>
+            </a>
+          </h3>
+          <h6 class="card-subtitle mb-2">$92.42/night</h6>
+          <p class="card-text">
+            <%= campground.description %>
+          </p>
+          <p class="card-text">
+            <small class="text-muted">
+              <%= campground.comments.length %> Reviews</small
+            >
+          </p>
+        </div>
+      </div>
+      <div class="seperator text-right mt-5 mb-3">
+        <a
+          href="/campgrounds/<%= campground._id %>/comments/new"
+          class="btn btn-success"
+          >Add a Comment</a
+        >
+      </div>
+      <div class="list-group mb-5">
+        <% campground.comments.forEach((comment) => { %>
+        <a
+          href="#"
+          class="list-group-item list-group-item-action flex-column align-items-start"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">
+              <%= comment.author %>
+            </h5>
+            <small>3 days ago</small>
+          </div>
+          <p class="mb-1">
+            <%= comment.text %>
+          </p>
+          <small></small>
+        </a>
+        <% }) %>
+      </div>
     </div>
   </div>
 </div>
