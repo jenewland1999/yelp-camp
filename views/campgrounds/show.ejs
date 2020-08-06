@@ -31,11 +31,13 @@
         </div>
       </div>
       <div class="seperator text-right mt-5 mb-3">
+        <% if (user) { %>
         <a
           href="/campgrounds/<%= campground._id %>/comments/new"
           class="btn btn-success"
           >Add a Comment</a
         >
+        <% } %>
       </div>
       <div class="list-group mb-5">
         <% campground.comments.forEach((comment) => { %>
