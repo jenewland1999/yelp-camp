@@ -25,8 +25,11 @@
           </p>
           <p class="card-text">
             <small class="text-muted">
-              <%= campground.comments.length %> Reviews</small
-            >
+              <em>Submitted by <%= campground.author.username %> </em> </small
+            >|
+            <small class="text-muted">
+              <%= campground.comments.length %> Reviews
+            </small>
           </p>
         </div>
       </div>
