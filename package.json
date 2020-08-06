@@ -1,0 +1,26 @@
+{
+  "name": "yelp-camp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Yelp Camp is a project in which I follow along with Colt Steele and his Web Developer Bootcamp course available on Udemy. The main project of the course is Yelp Camp - a website designed to showcase various campsites across the United States.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenewland1999/yelp-camp.git"
+  },
+  "author": "Jordan Newland <github@jenewland.me.uk> (https://jenewland.me.uk)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jenewland1999/yelp-camp/issues"
+  },
+  "homepage": "https://github.com/jenewland1999/yelp-camp#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  }
+}
