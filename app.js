@@ -8,8 +8,8 @@ const path = require("path");
 const app = express();
 
 // DB Seeds File
-const seedDB = require("./seeds");
-seedDB();
+// const seedDB = require("./seeds");
+// seedDB();
 
 // Express Routes
 const indexRoutes = require("./routes/index");
